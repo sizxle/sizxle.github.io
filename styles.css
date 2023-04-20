@@ -10,13 +10,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-html{
+/* html{
    font-size: 62.5%;
-}
+} */
 
 /* Global styles */
 body{
-  font-size:1.8rem;
+  /* font-size:1.8rem; */
   font-family: "Lucida Console", "Courier New", monospace;
   background-color:black;
   color:var(--main-white);
@@ -30,49 +30,8 @@ a {
   box-sizing: inherit;
 }
 
-/* Header styles */
-header{
-    width:100%;
-    background-color:var(--main-black);
-    padding: 1rem 0;
-    color:var(--main-white);
-    position:fixed;
-    top:0;
-    
-}
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
-header .container h1{
-  font-size:3rem;
-}
-header #navbar {
-    display: flex;
-}
-#navbar{
-  position:fixed;
-  padding-top: 20px;
-  top:0;
-  right:25%;
 
-}
-  
-header nav ul {
-    display: flex;
-    list-style: none;
-}
-
-#navbar a{
-  text-decoration:none;
-  color:var(--main-white);
-  padding: 0.5rem 1rem;
-}
 
 /* Main section styles */
 #main-doc{
@@ -112,7 +71,7 @@ header nav ul {
     margin-top: 2rem;
 }
 #projects .grid .card {
-    width: 300px;
+    width: 350px;
     height: 400px;
     background-color:var(--main-orange) ;
     border-radius: 10px;
