@@ -5,29 +5,29 @@
     <title>Sthembizos's Welcome Page</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
   </head>
   <body>
     <header>
-        <div class="container">
-            <h1>Sthembizo Molefi</h1>
-            <nav id="navbar">
-                <ul>
-                   <li><a href="#welcome-section">About</a></li>
-                    <li><a href="#projects">Work</a></li>
-                    <li><a href="#contacts">Contact</a></li>
-                </ul>
-              </nav>
+      <nav class="w3-bar  w3-black  w3-top"  id="navBar" >
+        <div class=" w3-padding-16 w3-xxlarge w3-bar-item"><h1>Sthembizo Molefi</h1></div>
+        <div class="w3-padding-24 w3-xlarge  w3-right">
+          
+            <a href="#welcome-section" class="w3-bar-item  w3-button w3-hover-red" id="aboutBtn">ABOUT</a>
+            <a href="#projects" class="w3-bar-item  w3-button w3-hover-red" id="workBtn">WORK</a>
+            <a href="#contacts" class="w3-bar-item  w3-button w3-hover-red" id="contactBtn">CONTACT</a>
         </div>
+    </nav>
     </header>
       
     <main id="main-doc">
       <section id="welcome-section">
         <h1>HI, I am Sthembizo</h1>
-        <p>a web Dev</p>
+        <p id="aniType" class="w3-xxlarge"></p>
       </section>
       <section id="projects">
         <div class="container">
-            <h2 class="projects-header"> My Projects</h2>
+            <h2 class="projects-header w3-xxlarge"> My Projects</h2>
             <ul class="grid">
                 <li>
                     <div class="card">
@@ -67,6 +67,50 @@
         
       </section>
     </main>
+
+    <script>
+      var sentences = ["A web Dev", "A SoftWare Dev", "A Data Scientist"];
+      var index = 0;
+      var speed = 100;
+      var deletingSpeed = 50;
+      var currentSentence = "";
+      var isDeleting = false;
+      
+      function type() {
+        currentSentence = sentences[index % sentences.length].substring(0, currentSentence.length + 1);
+        document.getElementById("aniType").textContent = currentSentence;
+        if (currentSentence === sentences[index % sentences.length]) {
+          isDeleting = true;
+          setTimeout(function() {
+            deleteType();
+          }, 3000);
+        } else {
+          setTimeout(function() {
+            type();
+          }, speed);
+        }
+      }
+      
+      function deleteType() {
+        currentSentence = currentSentence.substring(0, currentSentence.length - 1);
+        document.getElementById("aniType").textContent = currentSentence;
+        if (currentSentence === "") {
+          isDeleting = false;
+          index++;
+          setTimeout(function() {
+            type();
+          }, 500);
+        } else {
+          setTimeout(function() {
+            deleteType();
+          }, deletingSpeed);
+        }
+      }
+      
+      type();
+    </script>
+    
+    
   </body>
 </html>
 
