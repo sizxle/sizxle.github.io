@@ -1,0 +1,40 @@
+{
+ "projects":[
+   {
+     "name":"PsyberTax",
+     "link":"https://sizxle.github.io/Tax-Calculator/",
+     "img":"../imgs/IMG_9592.jpg" ,
+     "description": "Calculates Your Tax's , Gives you a break down of your taxes. \n Built With HTML, JS AND CSS "
+   }
+    ,{
+      "name":"AR APP CLONE",
+      "link":"https://sizxle.github.io/AR-APP-REPLICA/",
+      "img":"../imgs/ARCLONE.PNG" ,
+      "description": "Replica of Ambani Africa's AR APP using HTML,CSS,Java Script,AR.Js and A-Frame"
+    },
+   {
+     "name":"Clothing Store",
+     "link":"https://sizxle.github.io/ygfwebsite/",
+     "img":"../imgs/IMG_3412.PNG" ,
+     "description": "Clothing store for YGF using HTML,CSS and JavaScript"
+   },
+   {
+     "name":"Verify Web App",
+     "link":"https://sizxle.github.io/verify/",
+     "img":"../imgs/IMG_4051.PNG" ,
+     "description": "RSA ID Validation Web APP using ReactJS, Firebase and JavaScript"
+   },
+   {
+     "name":"Booking System",
+     "link":"https://sizxle.github.io/fix/",
+     "img":"../imgs/IMG_4608.jpg" ,
+     "description": "Booking Web App For A Phone Repair Shop Built with ReactJS & Tailwind CSS"
+   },
+   {
+     "name":"Random Quote Generator",
+     "link":"https://sizxle.github.io/Nasty-C-Quote-Generator/",
+     "img":"../imgs/IMG_4609.jpg" ,
+     "description": "Built with HTML, CSS, JQuery & Bootstrap"
+   }
+ ]
+}
