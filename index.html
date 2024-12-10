@@ -28,53 +28,7 @@
       <section id="projects">
         <div class="container">
             <h2 class="projects-header w3-xxlarge"> My Projects</h2>
-            <ul class="grid">
-                <li>
-                    <div class="card">
-                        <a class="project project-tile" href="https://sizxle.github.io/AR-APP-REPLICA/" target="_blank">
-                            <img src="http://drive.google.com/uc?export=view&id=1CAT768IB3bVjGYJNjaj_WMcHx5MwRsIS" alt="Project 1">
-                            <h3>AR APP CLONE</h3>
-                            <p>Replica of Ambani Africas AR APP using HTML,CSS,Java Script,AR.Js and A-Frame </p>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="card">
-                        <a class="project project-tile" href="https://sizxle.github.io/ygfwebsite/" target="_blank">
-                            <img src="http://drive.google.com/uc?export=view&id=1d5AuX9BW7lX80UXNlGMu_sVRPXNNyDTQ" alt="Project 2">
-                            <h3>Clothing Store</h3>
-                            <p>Clothing store for YGF using HTML,CSS and JavaScript </p>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                  <div class="card">
-                      <a class="project project-tile" href="https://sizxle.github.io/verify/" target="_blank">
-                          <img src="http://drive.google.com/uc?export=view&id=1FW3nuDQtGTJPw-R-KvfkgJryuTJT-ekx" alt="Project 3">
-                          <h3>Verify Web app</h3>
-                          <p>RSA ID Validation Web APP using ReactJS, Firebase and JavaScript </p>
-                      </a>
-                  </div>
-              </li>
-              <li>
-                <div class="card">
-                    <a class="project project-tile" href="https://sizxle.github.io/Nasty-C-Quote-Generator/" target="_blank">
-                        <img src="http://drive.google.com/uc?export=view&id=1N15Nhqfa7u5BG98EdExky92hFEZQbqUN" alt="Project 4">
-                        <h3>Random Quote Generator</h3>
-                        <p>Built with HTML, CSS, JQuery & Bootstrap</p>
-                    </a>
-                </div>
-              </li>
-              <li>
-                <div class="card">
-                    <a class="project project-tile" href="https://sizxle.github.io/fix/" target="_blank">
-                        <img src="http://drive.google.com/uc?export=view&id=1FCcpCdytsuEs-DwhEvptlkDXkYWHWcY6" alt="Project 5">
-                        <h3>Booking System</h3>
-                        <p>Booking Web App For A Phone Repair Shop Built with ReactJS & Tailwind CSS </p>
-                    </a>
-                </div>
-              </li>
-            </ul>
+            <ul class="grid" id="project-list"></ul>
         </div>
       </section>
       <section id="contacts">
@@ -94,47 +48,7 @@
       </section>
     </main>
 
-    <script>
-      var sentences = ["A web Dev", "A SoftWare Dev", "A Data Scientist"];
-      var index = 0;
-      var speed = 100;
-      var deletingSpeed = 50;
-      var currentSentence = "";
-      var isDeleting = false;
-      
-      function type() {
-        currentSentence = sentences[index % sentences.length].substring(0, currentSentence.length + 1);
-        document.getElementById("aniType").textContent = currentSentence;
-        if (currentSentence === sentences[index % sentences.length]) {
-          isDeleting = true;
-          setTimeout(function() {
-            deleteType();
-          }, 3000);
-        } else {
-          setTimeout(function() {
-            type();
-          }, speed);
-        }
-      }
-      
-      function deleteType() {
-        currentSentence = currentSentence.substring(0, currentSentence.length - 1);
-        document.getElementById("aniType").textContent = currentSentence;
-        if (currentSentence === "") {
-          isDeleting = false;
-          index++;
-          setTimeout(function() {
-            type();
-          }, 500);
-        } else {
-          setTimeout(function() {
-            deleteType();
-          }, deletingSpeed);
-        }
-      }
-      
-      type();
-    </script>
+    <script src="script.js"></script>
     
     
   </body>
